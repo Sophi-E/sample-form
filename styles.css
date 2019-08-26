@@ -45,7 +45,9 @@ input[type="submit"] {
     align-items: center;
     margin: 0px auto;
     text-align: center;
+    display: block;
 }
+
 input[type="submit"]:hover {
   background-color: #2f363f;
   color: #fff;
