@@ -40,6 +40,12 @@ input[type="submit"] {
   color: #222;
   cursor: pointer;
 }
+
+.btn {
+    align-items: center;
+    margin: 0px auto;
+    text-align: center;
+}
 input[type="submit"]:hover {
   background-color: #2f363f;
   color: #fff;
