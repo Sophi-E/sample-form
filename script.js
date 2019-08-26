@@ -1,15 +1,31 @@
-var name = document.form1.name.value;
-var email = document.form1.email.value;
-var password = document.form1.password.value;
-var password2 = document.form1.password2.value;
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var password2 = document.getElementById("password2").value;
 
-function validate() {
-  if (name == null || name == "") {
-    alert("Please provide your name");
-    return false;
-  } else if (password.length < 8) {
-    alert("Password must be at least 8 characters long.");
-    return false;
+  if (name == "") {
+    document.getElementById("userName").innerHTML = "Please enter your name!";
+  } else if (name != "") {
+    document.getElementById("userName").innerHTML = "";
   }
-  return true;
+
+  if (email == "") {
+    document.getElementById("userEmail").innerHTML = "Please enter your email!";
+  } else if (email != "") {
+    document.getElementById("userEmail").innerHTML = "";
+  }
+
+  if (password.length < 8) {
+    document.getElementById("userPw").innerHTML =
+      "Password should be at least 8 characters";
+  } else if (password.length >= 8) {
+    document.getElementById("userPw").innerHTML = "";
+  }
+
+  if (password !== password2) {
+    document.getElementById("userPw2").innerHTML = "Passwords don't match!!";
+  } else {
+    document.getElementById("userPw2").innerHTML = "";
+  }
 }

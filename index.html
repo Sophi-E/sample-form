@@ -8,16 +8,27 @@
   <body>
     <div id="container">
       <h1>Sign Up Form</h1>
-      <form name="form1" action="#" onsubmit="return validate()">
+      <form
+        name="form1"
+        method="post"
+        onsubmit="event.preventDefault(); return validateForm()"
+      >
         <label for="name">Name:</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" id="name" />
+        <div id="userName"></div>
 
         <label for="email">Email:</label>
-        <input type="email" name="email" />
+        <input type="email" name="email" id="email" />
+        <div id="userEmail"></div>
+
         <label for="password">Password:</label>
-        <input type="password" name="password" />
+        <input type="password" name="password" id="password" />
+        <div id="userPw"></div>
+
         <label for="password2">Confirm Password:</label>
-        <input type="password" name="password2" />
+        <input type="password" name="password2" id="password2" />
+        <div id="userPw2"></div>
+
         <input class="btn" type="submit" value="Submit" />
       </form>
       <script src="script.js"></script>
